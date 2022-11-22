@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'contact', to: 'pages#contact'
   get 'aboutus', to: 'pages#aboutus'
-
+  get 'events', to: 'pages#events'
 
 end
