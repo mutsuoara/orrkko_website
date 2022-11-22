@@ -10,4 +10,14 @@ class PagesController < ApplicationController
 
     def events
     end
+
+    def history
+    end
+    
+    def instructors
+    end
+  
+    def schools
+    end
+    
 end
