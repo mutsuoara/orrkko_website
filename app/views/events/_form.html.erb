@@ -1,0 +1,16 @@
+<%= form_with(model: event) do |f| %>
+<div>
+<%= f.label :title, style: "display: block" %>
+<%= f.text_field :title%>
+</div>
+<div>
+<%= f.label :content, style: "display: block" %>
+<%= f.text_area :content%>
+</div>
+
+<br>
+<div>
+<%= f.submit :"Create Event" %>
+</div>
+<% end %>
+
