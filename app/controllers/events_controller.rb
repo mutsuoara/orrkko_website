@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-before_action :set_event, only: %i[show edit update]
+    before_action :set_event, only: %i[show edit update destroy]
     
     def index
         @events = Event.all
@@ -27,8 +27,8 @@ before_action :set_event, only: %i[show edit update]
     end
 
     def update
-        respond to do |format|
-            if event.update(event_params)
+        respond_to do |format|
+            if @event.update(event_params)
                 format.html {redirect_to event_url(@event), notice: "Event was updated successfully"}
             else
                 format.html {render :edit, status: :unprocessable_entity}
