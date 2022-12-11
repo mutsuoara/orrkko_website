@@ -2,8 +2,16 @@
 
 one:
   title: MyString
-  user_id: 1
+  date: 2022-12-10 20:45:34
+  location: MyText
+  phone_number: MyString
+  email: MyString
+  website: MyText
 
 two:
   title: MyString
-  user_id: 1
+  date: 2022-12-10 20:45:34
+  location: MyText
+  phone_number: MyString
+  email: MyString
+  website: MyText
