@@ -27,6 +27,13 @@ html, body {
     outline-color: black;
 }
 
+.title-header {
+    font-weight: bold;
+    font-size: 100px;
+    text-shadow: 2px 2px blue;
+    text-align: center;
+}
+
 #sticky-footer {
     flex-shrink: none;
 }
