@@ -1,32 +1,27 @@
 <div id="<%= dom_id event %>">
-  <p>
-    <strong>Title:</strong>
-    <%= event.title %>
-  </p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Date</th>
+      <th scope="col">Location</th>
+      <th scope="col">Contact Number</th>
+      <th scope="col">Email</th>
+      <th scope="col">Website</th>
+      <th scope="col">Content</th>
+    </tr>
+  </thead>
+  <tbody>
+      <th scope="row"><%= link_to event.title, event %></th>
+      <th scope="row"><%= local_time event.date, format: '%B %e, %Y %l:%M %P' %></th>
+      <th scope="row"><%= event.location %></th>
+      <th scope="row"><%= event.phone_number %></th>
+      <th scope="row"><%= event.email %></th>
+      <th scope="row"><%= link_to event.website, "https://#{event.website}", :target => "_blank" %> </th>
+      <th scope="row"><%= event.content %></th>
+  </tbody>
+</table>
+<%= event.content %>
 
-  <p>
-    <strong>Date:</strong>
-    <%= event.date %>
-  </p>
-
-  <p>
-    <strong>Location:</strong>
-    <%= event.location %>
-  </p>
-
-  <p>
-    <strong>Phone number:</strong>
-    <%= event.phone_number %>
-  </p>
-
-  <p>
-    <strong>Email:</strong>
-    <%= event.email %>
-  </p>
-
-  <p>
-    <strong>Website:</strong>
-    <%= event.website %>
-  </p>
 
 </div>
