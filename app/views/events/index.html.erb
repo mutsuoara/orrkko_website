@@ -1,12 +1,10 @@
 <p style="color: green"><%= notice %></p>
+<div class="container">
 
-<h1>Events</h1>
-
-<div id="events">
-  <% @events.each do |event| %>
-    <%= render event %>
-
-  <% end %>
+  <h1>Events</h1>
+  <br>
+  <%= render 'event', event: @event %>
+  <br>
+  <!--Need to add devise if statement to  make this only show if the user is an admin-->
+  <p><%= link_to "New event", new_event_path %></p>
 </div>
-
-<%= link_to "New event", new_event_path %>

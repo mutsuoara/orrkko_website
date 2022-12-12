@@ -1,27 +1,26 @@
-<div id="<%= dom_id event %>">
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Title</th>
-      <th scope="col">Date</th>
-      <th scope="col">Location</th>
-      <th scope="col">Contact Number</th>
-      <th scope="col">Email</th>
-      <th scope="col">Website</th>
-      <th scope="col">Content</th>
-    </tr>
-  </thead>
-  <tbody>
-      <th scope="row"><%= link_to event.title, event %></th>
-      <th scope="row"><%= local_time event.date, format: '%B %e, %Y %l:%M %P' %></th>
-      <th scope="row"><%= event.location %></th>
-      <th scope="row"><%= event.phone_number %></th>
-      <th scope="row"><%= event.email %></th>
-      <th scope="row"><%= link_to event.website, "https://#{event.website}", :target => "_blank" %> </th>
-      <th scope="row"><%= event.content %></th>
-  </tbody>
-</table>
-<%= event.content %>
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Location</th>
+        <th>Phone Number</th>
+        <th colspan="4"></th>
+      </tr>
+    </thead>
 
+    <tbody>
+      <% @events.each do |event| %>
+        <tr>
+          <td><%= link_to event.title, event %></td>
+          <td><%= local_time event.date, format: '%B %e, %Y %l:%M %P' %></td>
+          <td><%= event.location %></td>
+          <td><%= event.phone_number %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
 </div>
+
