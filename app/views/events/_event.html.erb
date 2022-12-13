@@ -1,4 +1,4 @@
-<div class="container">
+<div id="event-table">
   <table class="table table-bordered table-hover">
     <thead class="table-dark">
       <tr>
@@ -15,14 +15,14 @@
 
     <tbody class="table-group-divider">
       <% @events.each do |event| %>
-        <tr>
+        <tr class="col-2 text-truncate">
           <td><%= link_to event.title, event %></td>
           <td><%= local_time event.date, format: '%B %e, %Y %l:%M %P' %></td>
           <td><%= event.location %></td>
           <td><%= event.phone_number %></td>
           <td><%= event.email %></td>
           <td><%= link_to event.website, "http://#{event.website}", :target => "_blank" %></td>
-          <td><%= event.content %></td>
+          <td id="truncate-content"><%= event.content %></td>
           <td><%= link_to "Edit this event", edit_event_path(event) %></td> 
 
         </tr>

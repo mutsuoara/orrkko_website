@@ -1,5 +1,5 @@
 /* @import '/node_modules/bootstrap/dist/css/bootstrap.css'; */
-@import "actiontext.css";
+@import "./actiontext.css";
 
 .navbar {
     background-color: Black !important;
@@ -67,5 +67,17 @@ html, body {
     color: blue;
 
 }
+
+#event-table {
+    max-width: calc(87%);
+}
+
+#truncate-content {
+    overflow: hidden;
+    max-width: 150px;
+    display: block;
+    text-overflow: ellipsis;
+
+} 
 
 
