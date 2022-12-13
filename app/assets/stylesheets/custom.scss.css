@@ -34,6 +34,10 @@ html, body {
     text-align: center;
 }
 
+.text-capitalize {
+    font-size: 40px;
+}
+
 #sticky-footer {
     flex-shrink: none;
 }

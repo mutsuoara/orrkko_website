@@ -1,8 +1,18 @@
 <p style="color: green"><%= notice %></p>
 <div class="container">
-  <h1><%= @event.title %></h1>
 
   <div>
+  <div class="card">
+  <div class="card-header">
+    <strong class="text-capitalize"><%= @event.title %></strong>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= local_time @event.date, format: '%B %e, %Y %l:%M %P' %> | <%= @event.location %></h5>
+    <p class="card-text"><%= @event.phone_number %> | <%= @event.email %></p>
+    <p class="card-text"><%= @event.content %></p>
+    <div class="btn btn-primary"<%= link_to @event.website, "http://#{@event.website}", :target => "_blank" %></div>
+  </div>
+</div>
     <%= link_to "Edit this event", edit_event_path(@event) %> |
     <%= link_to "Back to events", events_path %>
 

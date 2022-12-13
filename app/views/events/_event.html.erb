@@ -1,22 +1,30 @@
 <div class="container">
-  <table>
-    <thead>
+  <table class="table table-bordered table-hover">
+    <thead class="table-dark">
       <tr>
         <th>Title</th>
         <th>Date</th>
         <th>Location</th>
         <th>Phone Number</th>
-        <th colspan="4"></th>
+        <th>Email</th>
+        <th>Website</th>
+        <th>Content</th>
+        <th colspan="7"></th>
       </tr>
     </thead>
 
-    <tbody>
+    <tbody class="table-group-divider">
       <% @events.each do |event| %>
         <tr>
           <td><%= link_to event.title, event %></td>
           <td><%= local_time event.date, format: '%B %e, %Y %l:%M %P' %></td>
           <td><%= event.location %></td>
           <td><%= event.phone_number %></td>
+          <td><%= event.email %></td>
+          <td><%= link_to event.website, "http://#{event.website}", :target => "_blank" %></td>
+          <td><%= event.content %></td>
+          <td><%= link_to "Edit this event", edit_event_path(event) %></td> 
+
         </tr>
       <% end %>
     </tbody>
