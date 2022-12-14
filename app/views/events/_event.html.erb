@@ -23,6 +23,7 @@
           <td><%= event.email %></td>
           <td><%= link_to event.website, "http://#{event.website}", :target => "_blank" %></td>
           <td id="truncate-content"><%= event.content %></td>
+          <!--Need to add devise if statement to  make this only show if the user is an admin-->
           <td><%= link_to "Edit this event", edit_event_path(event) %></td> 
 
         </tr>

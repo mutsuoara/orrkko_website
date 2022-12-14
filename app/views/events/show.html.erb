@@ -1,6 +1,6 @@
-<p style="color: green"><%= notice %></p>
-<div class="container">
+<div class="container"><%= link_to "Back to events", events_path %></div>
 
+<div class="container">
   <div>
   <div class="card">
   <div class="card-header">
@@ -10,12 +10,13 @@
     <h5 class="card-title"><%= local_time @event.date, format: '%B %e, %Y %l:%M %P' %> | <%= @event.location %></h5>
     <p class="card-text"><%= @event.phone_number %> | <%= @event.email %></p>
     <p class="card-text"><%= @event.content %></p>
-    <div class="btn btn-primary"<%= link_to @event.website, "http://#{@event.website}", :target => "_blank" %></div>
+    <!-- Need to determine why the end a tag is marked as red, in UI it appears fine -->
+    <a class="btn btn-primary" <%= link_to @event.website, "http://#{@event.website}", :target => "_blank"%></a>
   </div>
 </div>
-    <%= link_to "Edit this event", edit_event_path(@event) %> |
-    <%= link_to "Back to events", events_path %>
 
-    <%= button_to "Destroy this event", @event, method: :delete %>
+
+      <%= link_to "Edit this event", edit_event_path(@event) %>
+      <%= button_to "Destroy this event", @event, method: :delete %>
   </div>
 </div>
