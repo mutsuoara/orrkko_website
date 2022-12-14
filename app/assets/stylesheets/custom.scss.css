@@ -38,8 +38,14 @@ html, body {
     font-size: 40px;
 }
 
-.dropdown {
-    margin-right: 10px;
+#search-bar {
+    margin-top: 20px;
+    margin-left: 85%;
+    width: 10%;
+}
+
+#search-button {
+    margin-top: 20px;
 }
 
 #sticky-footer {

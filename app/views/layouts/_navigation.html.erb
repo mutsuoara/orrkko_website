@@ -35,37 +35,26 @@
                 <%= link_to 'Contact Us', contact_path %>
                 </li>
 
-                <%# <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Ryuei Ryu Organization
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">History</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Ryuei Ryu Dojos</a></li>
-                    <li><a class="dropdown-item" href="#">Ryuei Ryu Instructors</a></li>
-                </ul>
-                </li> %>
-                <%# <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-                </li> %>
         </div>
-            <div class="btn-group d-grid gap-2 d-md-flex justify-content-md-end">
-                <button type="button" class="btn btn-primary me-md-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    Profile
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><button class="dropdown-item" type="button">Login</button></li>
-                    <li><button class="dropdown-item" type="button">Register</button></li>
-                    <!-- add if statement for when someone is logged in only -->
-                    <li><button class="dropdown-item" type="button">Settings</button></li>
-                    <li><button class="dropdown-item" type="button">Logout</button></li>
-                </ul>
-            </div>
-            <%# <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>  %>
+
+        <div class="btn-group d-grid gap-2 d-md-flex justify-content-md-end">
+        <!-- create if statement for logged in user vs logged out user to display either Profile or Register -->
+            
+            <%# <button type="button" class="btn btn-primary" aria-expanded="false">
+                Register
+            </button> %>
+
+            <button type="button" class="btn btn-primary me-md-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Profile
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><button class="dropdown-item" type="button">Login</button></li>
+                <!-- add if statement for when someone is logged in only -->
+                <li><button class="dropdown-item" type="button">Settings</button></li>
+                <li><button class="dropdown-item" type="button">Logout</button></li>
+            </ul>
+        </div>
+
 
     </div>
 </nav>
